@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz HTML CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="quiz-section">
+        <h2>Quiz de Conhecimentos HTML E CSS</h2>
+        <form id="quiz-form">
+            <section class="question">
+                <h3>1. Qual elemento HTML é usado para criar um link?</h3>
+                <label><input type="radio" name="q1" value="A" onclick="disableOptions('q1'), playSound()"> A) link </label><br>
+                <label><input type="radio" name="q1" value="B" onclick="disableOptions('q1'), playSound()"> B) a </label><br>
+                <label><input type="radio" name="q1" value="C" onclick="disableOptions('q1'), playSound()"> C) Button</label><br>
+                <label><input type="radio" name="q1" value="D" onclick="disableOptions('q1'), playSound()"> D) Nav</label>
+            </section>
+
+            <section class="question">
+                <h3>2. Qual propriedade CSS é usada para alterar a cor do texto?</h3>
+                <label><input type="radio" name="q2" value="A" onclick="disableOptions('q2'), playSound()"> A) background-color </label><br>
+                <label><input type="radio" name="q2" value="B" onclick="disableOptions('q2'), playSound()"> B) font-color</label><br>
+                <label><input type="radio" name="q2" value="C" onclick="disableOptions('q2'), playSound()"> C) text-color</label><br>
+                <label><input type="radio" name="q2" value="D" onclick="disableOptions('q2'), playSound()"> D) color</label>
+            </section>
+
+            <!-- Repita a estrutura acima para as outras perguntas -->
+            
+            <button type="button" onclick="submitQuiz()">Enviar Respostas</button>           
+
+        </form>
+
+        <audio id="venceusom" src="som/venceu.mp3" preload="auto"></audio>
+        <audio id="selecionasom" src="som/seleciona.mp3" preload="auto"></audio>
+
+
+        <section id="result"></section>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
